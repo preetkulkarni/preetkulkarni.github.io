@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,12 +10,18 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Hi, I'm Preet</title>
+    <style>
+        .navbar .nav-link.active {
+            text-decoration: underline;
+        }
+    </style>
+
+    <title>Preet Kulkarni</title>
 </head>
 <body style="background-color: #1b262c;"> <!-- Background Color Set -->
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0f4c75;">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #0f4c75;">
         <div class="container-fluid">
             <div class="navbar-brand" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;">Welcome to my Portfolio</div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,6 +31,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="#" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Socials</a>
@@ -37,22 +46,50 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container-fluid mt-5 pt-5">
+    <!-- Home Content -->
+    <div class="container-fluid mt-2 pt-1">
         <div class="row g-0">
             <!-- Text Section Card (2/3 width) -->
             <div class="col-md-8 p-4">
                 <div class="card h-100" style="background-color: #3282b8; border: none;">
                     <div class="card-body text-white d-flex flex-column justify-content-between">
-                        <div>
-                            <h1 class="display-4" style="font-family: 'Montserrat', sans-serif;">Hello, I'm Preet Kulkarni</h1>
-                            <h2 class="text-warning" style="font-family: 'Montserrat', sans-serif;">Typed.js placeholder</h2>
-                            <p class="lead mt-3" style="font-family: 'Nunito', sans-serif;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tortor massa, tempus et molestie eget, lobortis et velit. Fusce et elementum ipsum. In vulputate suscipit dapibus. Mauris libero urna, interdum a velit vitae, rhoncus sollicitudin risus. In auctor felis sed eleifend dictum. Cras sapien ligula, aliquam eget massa et, hendrerit interdum dolor. Nam varius, diam eget malesuada consequat, ante dolor molestie elit, molestie lobortis lacus nibh id velit.
-                            </p>
-                            <p class="lead mt-3" style="font-family: 'Nunito', sans-serif;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tortor massa, tempus et molestie eget, lobortis et velit. Fusce et elementum ipsum. In vulputate suscipit dapibus. Mauris libero urna, interdum a velit vitae, rhoncus sollicitudin risus. In auctor felis sed eleifend dictum. Cras sapien ligula, aliquam eget massa et, hendrerit interdum dolor. Nam varius, diam eget malesuada consequat, ante dolor molestie elit, molestie lobortis lacus nibh id velit.
-                            </p>                            
+                        <div class="container pt-1">
+                            <h1 class="display-1" style="font-family: 'Montserrat', sans-serif;">Hello, I'm Preet</h1>
+                            <h1 class="text-warning" style="font-family: 'Montserrat', sans-serif;">
+                                <span id="element"></span>
+
+                                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+                                <!-- Setup and start animation! -->
+                                <script>
+                                    var typed = new Typed('#element', {
+                                    strings: ['<i>Student </i>', '<i>Aspiring Software Developer </i>', '<i>Cybersecurity Enthusiast </i>'],
+                                    typeSpeed: 90,   
+                                    backSpeed: 30,                  
+                                    loop: true,
+                                    });
+                                </script>
+
+                            </h1>
+                            <div class="container pt-4">
+                                <h3 style="font-family: 'Nunito', sans-serif;">
+                                    <small>
+                                        As a computer science engineering student, I am passionate about developing my technical skills and utilizing emerging technology to make a positive impact on the world as a whole. 
+    
+    I have proficiency in languages such as C++, Python and Java and am currently expanding my skill set by learning full-stack web development. I also have experience in working with various database tools such as MongoDB and SQL, which contributes towards my ability to build comprehensive and dynamic web applications.
+                                    </small>
+                                </h3>
+                            </div>
+                            <div class="container pt-4">                           
+                                <h3 style="font-family: 'Nunito', sans-serif;">
+                                    <small>
+                                        Besides my technical skills, I have gained valuable experience in leadership and teamwork through participation in various projects and extracurricular activities. I have organized and managed teams for hackathons, cultural events, and social initiatives, which has helped me develop adaptability, strong communication and organizational skills.
+
+My ultimate goal is to leverage my technical expertise, leadership capabilities, and creativity to contribute to impactful projects that make a difference. I am excited for opportunities to collaborate with like-minded professionals and organizations that prioritize innovation, growth, and positive societal impact.uch as MongoDB and SQL, which contributes towards my ability to build comprehensive and dynamic web applications.
+                                    </small>
+                                </h3>
+                                
+                            </div>                            
                         </div>
                     </div>
                 </div>
@@ -63,22 +100,71 @@
                 <div class="row row-cols-1 row-cols-md-1 g-4">
                     <div class="col">
                         <div class="card text-center" style="background-color: #bbe1fa; border: none;">
-                            <img src="../assets/pfp.png" class="card-img-top" alt="...">
+                            <img src="../assets/pfp.png" class="card-img-top" alt="Profile picture">
                             <div class="card-body">
-                                <h5 class="card-title" style="color: #1b262c; font-family: 'Montserrat', sans-serif;">Preet Kulkarni</h5>
-                                <p class="card-text" style="color: #1b262c; font-family: 'Nunito', sans-serif;">Lorem ipsum dolor sit amet</p>
+                                <h5 class="card-title" style="color: #1b262c; font-family: 'Montserrat', sans-serif;"><b>Preet Kulkarni</b></h5>
+                                <p class="card-text" style="color: #1b262c; font-family: 'Nunito', sans-serif;">Third Year Computer Science Student @ MUJ</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card text-center" style="background-color: #3282b8; border: none;">
                             <div class="card-body">
-                                <h5 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;">Resume</h5>
+                                <h5 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;"><b>Resume</b></h5>
                                 <p class="card-text" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Click here to access my Resume.</p>
                                 <a href="#" class="btn btn-light" style="font-family: 'Nunito', sans-serif;">Click Here</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5 pt-4">
+        <div class="col-md-12 p-4">
+            <div class="card text-center" style="background-color: #bbe1fa; border: none; ">
+                <div class="card-header">
+                    <h1 style="color: #1b262c; font-family: 'Montserrat', sans-serif;">
+                        <b>Skills</b>
+                    </h1>                                         
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" >Programming Languages</h3>
+                    <p class="card-text">images here</p>
+                    <h3 class="card-title" >Web Development</h3>
+                    <p class="card-text">images here</p>
+                    <h3 class="card-title" >Database Management</h3>
+                    <p class="card-text">images here</p>
+                    <h3 class="card-title" >Other Skills</h3>
+                    <p class="card-text">images here</p>
+                </div>
+                <div class="card-footer text-body-secondary">
+                </div>
+            </div>   
+        </div>        
+    </div>
+
+    <div class="container-fluid mt-5 pt-4">
+        <h1 class="display-4 text-center" style="font-family: 'Montserrat', sans-serif; color: #bbe1fa">
+            Socials
+        </h1>       
+    </div>
+    
+
+    <!-- Social Content -->
+    <div class="container-fluid mt-5 pt-1">
+        <!-- LinkedIn Card -->
+        <div class="col-md-6 p-4">
+            <div class="card mb-3 text-center" style="background-color: #3282b8; border: none;">
+                <a href="https://www.linkedin.com/in/preet-kulkarni-2453ab284/" target="_blank">
+                    <img src="../assets/linkedin.png" class="card-img-top" alt="LinkedIn Logo" style="height: 400px; width: 400px; border-radius: 50%; margin-top: 50px; margin-bottom: 50px;">                       
+                </a>
+                <div class="card-body">
+                    <h3 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;"><b>LinkedIn</b></h3>
+
+                    <h4 style="color: #bbe1fa; font-family: 'Nunito', sans-serif;"><small>Connect with me on LinkedIn!</small></h4>
+                    <p class="card-text"><small class="text-body-secondary">___</small></p>
                 </div>
             </div>
         </div>
