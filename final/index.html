@@ -11,15 +11,192 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        /* Global Responsive Styles */
+        body {
+            background-color: #1b262c;
+            overflow-x: hidden;
+        }
+    
         .navbar .nav-link.active {
             text-decoration: underline;
+        }
+    
+        /* Responsive Text Sizing */
+        @media (max-width: 768px) {
+            .display-1 {
+                font-size: 2.5rem;
+            }
+            h3 small {
+                font-size: 0.9rem;
+            }
+            .skill-icon-text {
+                font-size: 1.1rem !important;
+            }
+        }
+    
+        /* Equal Height Container Styles */
+        .equal-height-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    
+        /* Text Section Card Styles */
+        .text-section-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        /* Profile Section Styles */
+        .profile-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .profile-card {
+            flex: 1;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+    
+        /* Resume Card Styles */
+        .resume-card {
+            flex: 1;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .resume-card .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+    
+        .resume-button {
+            margin-top: 0rem;
+            padding: 0.5rem 2rem;
+            transition: all 0.3s ease;
+        }
+    
+        .resume-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    
+        /* Skills Section Styles */
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.3s ease;
+        }
+    
+        .skill-icon:hover {
+            transform: scale(1.1);
+        }
+    
+        @media (max-width: 768px) {
+            .skill-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    
+        /* Social Media Section Styles */
+        .linkedin-logo {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            margin: 30px auto;
+            max-width: 100%;
+        }
+    
+        .github-stats {
+            height: 300px;
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            border-radius: 10px;
+        }
+    
+        @media (max-width: 768px) {
+            .linkedin-logo {
+                height: 200px;
+                width: 200px;
+                margin: 20px auto;
+            }
+            .github-stats {
+                height: auto;
+                margin: 20px auto;
+            }
+            .profile-card, .resume-card {
+                margin-bottom: 1rem;
+            }
+        }
+    
+        /* Section Spacing */
+        .section-container {
+            padding: 1rem;
+        }
+    
+        @media (min-width: 768px) {
+            .section-container {
+                padding: 2rem;
+            }
+        }
+    
+        /* Skills Container Layout */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+    
+        .skill-item {
+            text-align: center;
+            margin: 0.5rem;
+        }
+    
+        /* Card Hover Effects */
+        .card {
+            transition: transform 0.3s ease;
+        }
+    
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    
+        /* Link Transitions */
+        a {
+            transition: all 0.3s ease;
+        }
+    
+        /* Ensure Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 
     <title>Preet Kulkarni</title>
 </head>
-<body style="background-color: #1b262c;"> <!-- Background Color Set -->
-
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #0f4c75;">
         <div class="container-fluid">
@@ -48,35 +225,22 @@
 
     <!-- Home Content -->
     <div class="container-fluid mt-2 pt-1">
-        <div class="row g-0">
-            <!-- Text Section Card (2/3 width) -->
+        <div class="row equal-height-container">
+            <!-- Text Section Card -->
             <div class="col-md-8 p-4">
-                <div class="card h-100" style="background-color: #3282b8; border: none;">
-                    <div class="card-body text-white d-flex flex-column justify-content-between">
+                <div class="card text-section-card" style="background-color: #3282b8; border: none;">
+                    <div class="card-body text-white">
                         <div class="container pt-1">
                             <h1 class="display-1" style="font-family: 'Montserrat', sans-serif;">Hello, I'm Preet</h1>
                             <h1 class="text-warning" style="font-family: 'Montserrat', sans-serif;">
                                 <span id="element"></span>
-
-                                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-                                <!-- Setup and start animation! -->
-                                <script>
-                                    var typed = new Typed('#element', {
-                                    strings: ['<i>Student </i>', '<i>Aspiring Software Developer </i>', '<i>Cybersecurity Enthusiast </i>'],
-                                    typeSpeed: 90,   
-                                    backSpeed: 30,                  
-                                    loop: true,
-                                    });
-                                </script>
-
                             </h1>
                             <div class="container pt-4">
                                 <h3 style="font-family: 'Nunito', sans-serif;">
                                     <small>
                                         As a computer science engineering student, I am passionate about developing my technical skills and utilizing emerging technology to make a positive impact on the world as a whole. 
     
-    I have proficiency in languages such as C++, Python and Java and am currently expanding my skill set by learning full-stack web development. I also have experience in working with various database tools such as MongoDB and SQL, which contributes towards my ability to build comprehensive and dynamic web applications.
+                                        I have proficiency in languages such as C++, Python and Java and am currently expanding my skill set by learning full-stack web development. I also have experience in working with various database tools such as MongoDB and SQL, which contributes towards my ability to build comprehensive and dynamic web applications.
                                     </small>
                                 </h3>
                             </div>
@@ -84,36 +248,44 @@
                                 <h3 style="font-family: 'Nunito', sans-serif;">
                                     <small>
                                         Besides my technical skills, I have gained valuable experience in leadership and teamwork through participation in various projects and extracurricular activities. I have organized and managed teams for hackathons, cultural events, and social initiatives, which has helped me develop adaptability, strong communication and organizational skills.
-
-My ultimate goal is to leverage my technical expertise, leadership capabilities, and creativity to contribute to impactful projects that make a difference. 
+    
+                                        My ultimate goal is to leverage my technical expertise, leadership capabilities, and creativity to contribute to impactful projects that make a difference. 
                                     </small>
                                 </h3>
-                                
-                            </div>                            
+                            </div>
+                            <br>                            
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Profile Section Card (1/3 width) -->
+    
+            <!-- Profile Section -->
             <div class="col-md-4 p-4">
-                <div class="row row-cols-1 row-cols-md-1 g-4">
-                    <div class="col">
-                        <div class="card text-center" style="background-color: #bbe1fa; border: none;">
-                            <img src="../assets/images/pfp.png" class="card-img-top" alt="Profile picture">
-                            <div class="card-body">
-                                <h4 class="card-title" style="color: #1b262c; font-family: 'Montserrat', sans-serif;"><b>Preet Kulkarni</b></h4>
-                                <p class="card-text" style="color: #1b262c; font-family: 'Nunito', sans-serif; font-size: large;">Third Year Computer Science Student @ MUJ</p>
-                            </div>
+                <div class="profile-container">
+                    <!-- Profile Card -->
+                    <div class="card profile-card" style="background-color: #bbe1fa; border: none;">
+                        <img src="../assets/images/pfp.png" class="profile-image" alt="Profile picture">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: #1b262c; font-family: 'Montserrat', sans-serif;"><b>Preet Kulkarni</b></h3>
+                            <p class="card-text" style="color: #1b262c; font-family: 'Nunito', sans-serif; font-size: large;">Third Year Computer Science Student @ MUJ</p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card text-center" style="background-color: #3282b8; border: none;">
-                            <div class="card-body">
-                                <h4 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;"><b>Resume</b></h4>
-                                <p class="card-text" style="color: #bbe1fa; font-family: 'Nunito', sans-serif; font-size: large;">Click here to access my Resume.</p>
-                                <a href="../assets/Resume_PreetKulkarni.pdf" target="_blank" class="btn btn-light btn-lg" style="font-family: 'Nunito', sans-serif;">Click Here</a>
-                            </div>
+                    
+                    <!-- Resume Card -->
+                    <div class="card resume-card" style="background-color: #3282b8; border: none;">
+                        <div class="card-body">
+                            <h3 class="card-title mb-3" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;">
+                                <b>Resume</b>
+                            </h3>
+                            <p class="card-text mb-4" style="color: #bbe1fa; font-family: 'Nunito', sans-serif; font-size: larger;">
+                                Click here to access my Resume
+                            </p>
+                            <a href="../assets/Resume_PreetKulkarni.pdf" 
+                               target="_blank" 
+                               class="btn btn-light resume-button" 
+                               style="font-family: 'Nunito', sans-serif;">
+                                Click Here
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -121,6 +293,7 @@ My ultimate goal is to leverage my technical expertise, leadership capabilities,
         </div>
     </div>
 
+    <!-- Skills Section -->
     <div class="container-fluid mt-2 pt-4">
         <div class="col-md-12 p-4">
             <div class="card text-center" style="background-color: #3282b8; border: none;">
@@ -130,82 +303,80 @@ My ultimate goal is to leverage my technical expertise, leadership capabilities,
                     </h1>                                         
                 </div>
                 <div class="card-body">
-    
                     <!-- Programming Languages Section -->
                     <h3 class="card-title" style="color: #ffffff; font-size: 2rem; font-family: 'Montserrat', sans-serif">Programming Languages</h3>
                     <div class="d-flex justify-content-center flex-wrap gap-5">
                         <div class="text-center">
-                            <img src="../assets/images/cpp-logo.png" alt="C++ Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">C++</p>
+                            <img src="../assets/images/cpp-logo.png" alt="C++ Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">C++</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/c-logo.png" alt="C Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">C</p>
+                            <img src="../assets/images/c-logo.png" alt="C Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">C</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/java-logo.png" alt="Java Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">Java</p>
+                            <img src="../assets/images/java-logo.png" alt="Java Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">Java</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/python-logo.png" alt="Python Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">Python</p>
+                            <img src="../assets/images/python-logo.png" alt="Python Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">Python</p>
                         </div>
                     </div>
-    
+
                     <!-- Web Development Section -->
                     <h3 class="card-title mt-3" style="color: #ffffff; font-size: 2rem; font-family: 'Montserrat', sans-serif">Web Development</h3>
                     <div class="d-flex justify-content-center flex-wrap gap-5">
                         <div class="text-center">
-                            <img src="../assets/images/html-logo.png" alt="HTML Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">HTML</p>
+                            <img src="../assets/images/html-logo.png" alt="HTML Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">HTML</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/css-logo.png" alt="CSS Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">CSS</p>
+                            <img src="../assets/images/css-logo.png" alt="CSS Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">CSS</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/react-logo.png" alt="React Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">React</p>
+                            <img src="../assets/images/react-logo.png" alt="React Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">React</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/bootstrap-logo.png" alt="Bootstrap Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">Bootstrap</p>
+                            <img src="../assets/images/bootstrap-logo.png" alt="Bootstrap Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">Bootstrap</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/nodejs-logo.png" alt="Node.js Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">Node.js</p>
+                            <img src="../assets/images/nodejs-logo.png" alt="Node.js Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">Node.js</p>
                         </div>
                     </div>
-    
+
                     <!-- Database Management Section -->
                     <h3 class="card-title mt-3" style="color: #ffffff; font-size: 2rem; font-family: 'Montserrat', sans-serif">Database Management</h3>
                     <div class="d-flex justify-content-center flex-wrap gap-5">
                         <div class="text-center">
-                            <img src="../assets/images/sql-logo.png" alt="MySQL Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">MySQL</p>
+                            <img src="../assets/images/sql-logo.png" alt="MySQL Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">MySQL</p>
                         </div>
                         <div class="text-center">
-                            <img src="../assets/images/mongo-logo.png" alt="MongoDB Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">MongoDB</p>
+                            <img src="../assets/images/mongo-logo.png" alt="MongoDB Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">MongoDB</p>
                         </div>
                     </div>
-    
+
                     <!-- Other Skills Section -->
                     <h3 class="card-title mt-3" style="color: #ffffff; font-size: 2rem; font-family: 'Montserrat', sans-serif">Other Skills</h3>
                     <div class="d-flex justify-content-center flex-wrap gap-4">
                         <div class="text-center">
-                            <img src="../assets/images/git-logo.png" alt="Git Logo" style="width: 80px; height: 80px;">
-                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;">Git</p>
+                            <img src="../assets/images/git-logo.png" alt="Git Logo" class="skill-icon">
+                            <p style="color: #ffffff; font-size: 1.3rem; font-family: 'Nunito', sans-serif;" class="skill-icon-text">Git</p>
                         </div>
                     </div>
-    
                 </div>
                 <div class="card-footer text-body-secondary" style="background-color: #1b262c;"></div>
             </div>   
         </div>        
     </div>
-    
-    
+
+    <!-- Socials Section -->
     <div class="container-fluid mt-2 pt-4">
         <h1 class="display-4 text-center" style="font-family: 'Montserrat', sans-serif; color: #bbe1fa">
             Socials
@@ -213,53 +384,68 @@ My ultimate goal is to leverage my technical expertise, leadership capabilities,
     </div>
     
     <section id="socials">
-    <!-- Social Content -->
-    <div class="container-fluid mt-5 pt-1">
-        <!-- Row for Cards -->
-        <div class="row justify-content-center">
-            <!-- LinkedIn Card -->
-            <div class="col-md-5 p-4">
-                <div class="card mb-3 text-center" style="background-color: #3282b8; border: none;">
-                    <a href="https://www.linkedin.com/in/preet-kulkarni-2453ab284/" target="_blank">
-                        <img src="../assets/images/linkedin.png" class="card-img-top" alt="LinkedIn Logo" 
-                             style="height: 300px; width: 300px; border-radius: 50%; margin: 30px auto;">                       
-                    </a>
-                    <div class="card-body">
-                        <h3 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;">
-                            <b>LinkedIn</b>
-                        </h3>
-                        <h4 style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">
-                            <small>Connect with me on LinkedIn!</small>
-                        </h4>
-                        <p class="card-text pt-2">
-                            <small class="text-body-secondary"><a href="https://www.linkedin.com/in/preet-kulkarni-2453ab284/" target="_blank" class="btn btn-light" style="font-family: 'Nunito', sans-serif;">Click Here</a></small>
-                        </p>
+        <div class="container-fluid mt-5 pt-1">
+            <div class="row justify-content-center">
+                <!-- LinkedIn Card -->
+                <div class="col-md-5 p-4">
+                    <div class="card mb-3 text-center" style="background-color: #3282b8; border: none;">
+                        <a href="https://www.linkedin.com/in/preet-kulkarni-2453ab284/" target="_blank">
+                            <img src="../assets/images/linkedin.png" class="linkedin-logo" alt="LinkedIn Logo">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;">
+                                <b>LinkedIn</b>
+                            </h3>
+                            <h4 style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">
+                                <small>Connect with me on LinkedIn!</small>
+                            </h4>
+                            <p class="card-text pt-2">
+                                <small class="text-body-secondary">
+                                    <a href="https://www.linkedin.com/in/preet-kulkarni-2453ab284/" target="_blank" class="btn btn-light" style="font-family: 'Nunito', sans-serif;">Click Here</a>
+                                </small>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <!-- GitHub Contribution Stats Card -->
-            <div class="col-md-5 p-4">
-                <div class="card mb-3 text-center" style="background-color: #3282b8; border: none;">
-                    <a href="https://github.com/preetkulkarni" target="_blank">
-                        <img src="https://github-readme-stats.vercel.app/api?username=preetkulkarni&show_icons=true&theme=dark" class="card-img-top" alt="LinkedIn Logo" 
-                        style="height: 300px; width: 100%; max-width: 400px; margin: 30px auto; border-radius: 10px;">                       
-                    </a>
-                    <div class="card-body">
-                        <h3 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;">
-                            <b>GitHub</b>
-                        </h3>
-                        <h4 style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">
-                            <small>Check out my GitHub contributions!</small>
-                        </h4>
-                        <p class="card-text pt-2">
-                            <small class="text-body-secondary"><a href="https://github.com/preetkulkarni" target="_blank" class="btn btn-light" style="font-family: 'Nunito', sans-serif;">Click Here</a></small>
-                        </p>
+
+                <!-- GitHub Card -->
+                <div class="col-md-5 p-4">
+                    <div class="card mb-3 text-center" style="background-color: #3282b8; border: none;">
+                        <a href="https://github.com/preetkulkarni" target="_blank">
+                            <img src="https://github-readme-stats.vercel.app/api?username=preetkulkarni&show_icons=true&theme=dark" 
+                                 class="github-stats" alt="GitHub Stats">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: #bbe1fa; font-family: 'Montserrat', sans-serif;">
+                                <b>GitHub</b>
+                            </h3>
+                            <h4 style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">
+                                <small>Check out my GitHub contributions!</small>
+                            </h4>
+                            <p class="card-text pt-2">
+                                <small class="text-body-secondary">
+                                    <a href="https://github.com/preetkulkarni" target="_blank" class="btn btn-light" style="font-family: 'Nunito', sans-serif;">Click Here</a>
+                                </small>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>            
-    </div>    
+            </div>            
+        </div>    
     </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>Student </i>', '<i>Aspiring Software Developer </i>', '<i>Cybersecurity Enthusiast </i>'],
+            typeSpeed: 90,   
+            backSpeed: 30,                  
+            loop: true,
+        });
+    </script>
 </body>
 </html>
