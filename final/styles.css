@@ -1,0 +1,194 @@
+/* Global Responsive Styles */
+body {
+    background-color: #1b262c;
+    overflow-x: hidden;
+}
+
+.navbar .nav-link.active {
+    text-decoration: underline;
+}
+
+/* Responsive Text Sizing */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 2.5rem;
+    }
+    h3 small {
+        font-size: 0.9rem;
+    }
+    .skill-icon-text {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Equal Height Container Styles */
+.equal-height-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Text Section Card Styles */
+.text-section-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile Section Styles */
+.profile-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card {
+    flex: 1;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* Resume Card Styles */
+.resume-card {
+    flex: 1;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.resume-button {
+    margin-top: 0rem;
+    padding: 0.5rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Skills Section Styles */
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Social Media Section Styles */
+.linkedin-logo {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+.github-stats {
+    height: 300px;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .linkedin-logo {
+        height: 200px;
+        width: 200px;
+        margin: 20px auto;
+    }
+    .github-stats {
+        height: auto;
+        margin: 20px auto;
+    }
+    .profile-card, .resume-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Section Spacing */
+.section-container {
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .section-container {
+        padding: 2rem;
+    }
+}
+
+/* Skills Container Layout */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.skill-item {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+/* Card Hover Effects */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Link Transitions */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Ensure Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Link */
+.nav-link {
+    color: #bbe1fa; /* Default color */
+    text-decoration: none; /* Remove underline */
+    font-weight: normal; /* Default weight */
+}
+
+.nav-link.active-link {
+    font-weight: bold; /* Bold text for active link */
+    text-decoration: underline; /* Underline for active link */
+}
+
