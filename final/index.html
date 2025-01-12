@@ -10,189 +10,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* Global Responsive Styles */
-        body {
-            background-color: #1b262c;
-            overflow-x: hidden;
-        }
-    
-        .navbar .nav-link.active {
-            text-decoration: underline;
-        }
-    
-        /* Responsive Text Sizing */
-        @media (max-width: 768px) {
-            .display-1 {
-                font-size: 2.5rem;
-            }
-            h3 small {
-                font-size: 0.9rem;
-            }
-            .skill-icon-text {
-                font-size: 1.1rem !important;
-            }
-        }
-    
-        /* Equal Height Container Styles */
-        .equal-height-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-    
-        /* Text Section Card Styles */
-        .text-section-card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-    
-        /* Profile Section Styles */
-        .profile-container {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-    
-        .profile-card {
-            flex: 1;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-    
-        .profile-image {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin: 0 auto;
-            border-radius: 50%;
-        }
-    
-        /* Resume Card Styles */
-        .resume-card {
-            flex: 1;
-            margin-bottom: 0;
-            display: flex;
-            flex-direction: column;
-        }
-    
-        .resume-card .card-body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-    
-        .resume-button {
-            margin-top: 0rem;
-            padding: 0.5rem 2rem;
-            transition: all 0.3s ease;
-        }
-    
-        .resume-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-    
-        /* Skills Section Styles */
-        .skill-icon {
-            width: 80px;
-            height: 80px;
-            transition: transform 0.3s ease;
-        }
-    
-        .skill-icon:hover {
-            transform: scale(1.1);
-        }
-    
-        @media (max-width: 768px) {
-            .skill-icon {
-                width: 60px;
-                height: 60px;
-            }
-        }
-    
-        /* Social Media Section Styles */
-        .linkedin-logo {
-            height: 300px;
-            width: 300px;
-            border-radius: 50%;
-            margin: 30px auto;
-            max-width: 100%;
-        }
-    
-        .github-stats {
-            height: 300px;
-            width: 100%;
-            max-width: 400px;
-            margin: 30px auto;
-            border-radius: 10px;
-        }
-    
-        @media (max-width: 768px) {
-            .linkedin-logo {
-                height: 200px;
-                width: 200px;
-                margin: 20px auto;
-            }
-            .github-stats {
-                height: auto;
-                margin: 20px auto;
-            }
-            .profile-card, .resume-card {
-                margin-bottom: 1rem;
-            }
-        }
-    
-        /* Section Spacing */
-        .section-container {
-            padding: 1rem;
-        }
-    
-        @media (min-width: 768px) {
-            .section-container {
-                padding: 2rem;
-            }
-        }
-    
-        /* Skills Container Layout */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
-    
-        .skill-item {
-            text-align: center;
-            margin: 0.5rem;
-        }
-    
-        /* Card Hover Effects */
-        .card {
-            transition: transform 0.3s ease;
-        }
-    
-        .card:hover {
-            transform: translateY(-5px);
-        }
-    
-        /* Link Transitions */
-        a {
-            transition: all 0.3s ease;
-        }
-    
-        /* Ensure Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link href="./styles.css" rel="stylesheet">
 
     <title>Preet Kulkarni</title>
 </head>
@@ -207,23 +26,26 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Home</a>
+                        <a class="nav-link" href="#home" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Projects</a>
+                        <a class="nav-link" href="" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#socials" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Socials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Media</a>
+                        <a class="nav-link" href="" style="color: #bbe1fa; font-family: 'Nunito', sans-serif;">Media</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
 
     <!-- Home Content -->
+    <section id="home">
+    <br><br>
     <div class="container-fluid mt-2 pt-1">
         <div class="row equal-height-container">
             <!-- Text Section Card -->
@@ -292,7 +114,8 @@
             </div>
         </div>
     </div>
-
+    </section>
+    
     <!-- Skills Section -->
     <div class="container-fluid mt-2 pt-4">
         <div class="col-md-12 p-4">
@@ -375,15 +198,17 @@
             </div>   
         </div>        
     </div>
+    
 
     <!-- Socials Section -->
-    <div class="container-fluid mt-2 pt-4">
+    <section id="socials">
+    <br><br><br>
+    <div class="container-fluid">
         <h1 class="display-4 text-center" style="font-family: 'Montserrat', sans-serif; color: #bbe1fa">
             Socials
         </h1>       
     </div>
     
-    <section id="socials">
         <div class="container-fluid mt-5 pt-1">
             <div class="row justify-content-center">
                 <!-- LinkedIn Card -->
@@ -431,9 +256,10 @@
                     </div>
                 </div>
             </div>            
-        </div>    
-    </section>
-
+        </div> 
+        </section>   
+        <br><br><br><br><br><br>
+        
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -447,5 +273,8 @@
             loop: true,
         });
     </script>
+
+    <!-- Custom JS -->
+    <script src="./script.js"></script>
 </body>
 </html>
