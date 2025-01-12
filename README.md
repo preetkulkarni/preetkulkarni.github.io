@@ -47,7 +47,7 @@ portfolio-website/
 │   ├── Resume_PreetKulkarni.pdf
 │
 ├── index.html
-├── style.css
+├── styles.css
 └── script.js
 
 ```
