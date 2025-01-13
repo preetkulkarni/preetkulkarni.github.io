@@ -1,3 +1,21 @@
+:root {
+    --heading-scale: clamp(2rem, 5vw, 3.5rem);
+    --subheading-scale: clamp(1.1rem, 3vw, 1.5rem);
+    --primary-bg: #1b262c;
+    --secondary-bg: #3282b8;
+    --accent-color: #bbe1fa;
+    --text-light: #ffffff;
+}
+
+/* Typography */
+.display-1 {
+    font-size: var(--heading-scale);
+}
+
+h3 small {
+    font-size: var(--subheading-scale);
+}
+
 /* Global Responsive Styles */
 body {
     background-color: #1b262c;
@@ -40,6 +58,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 .profile-card {
@@ -87,10 +106,17 @@ body {
 
 /* Skills Section Styles */
 .skill-icon {
-    width: 80px;
-    height: 80px;
+    width: clamp(50px, 8vw, 80px);
+    height: clamp(50px, 8vw, 80px);
     transition: transform 0.3s ease;
 }
+
+.skill-icon-text {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    font-family: 'Nunito', sans-serif;
+}
+
 
 .skill-icon:hover {
     transform: scale(1.1);
@@ -101,6 +127,40 @@ body {
         width: 60px;
         height: 60px;
     }
+}
+
+/* Project Section Styles */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-color: var(--secondary-bg);
+    border: none;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.project-image {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.technology-stack {
+    margin-top: 1rem;
+}
+
+.technology-stack .badge {
+    font-family: 'Nunito', sans-serif;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
 }
 
 /* Social Media Section Styles */
@@ -137,12 +197,38 @@ body {
 
 /* Section Spacing */
 .section-container {
-    padding: 1rem;
+    padding: clamp(1rem, 5vw, 3rem);
+    margin: clamp(1rem, 3vw, 2rem) 0;
 }
 
 @media (min-width: 768px) {
-    .section-container {
-        padding: 2rem;
+    .skill-icon-text {
+        font-size: 1.1rem !important;
+    }
+
+    /* Profile Adjustments */
+    .profile-image {
+        max-width: 200px;
+    }
+
+    /* Project Adjustments */
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-image {
+        height: 180px;
+    }
+    
+    .technology-stack .badge {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    /* Section Spacing */
+    
+    section {
+        padding: 2rem 1rem;
     }
 }
 
