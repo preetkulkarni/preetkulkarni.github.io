@@ -278,3 +278,24 @@ html {
     text-decoration: underline; /* Underline for active link */
 }
 
+.carousel-inner {
+    max-height: 700px;
+}
+.carousel-img {
+    object-fit: cover;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .carousel-inner {
+        max-height: 400px;
+    }
+}
+@media (max-width: 576px) {
+    .carousel-inner {
+        max-height: 300px;
+    }
+}
+.modal-content {
+    background-color: #1b262c;
+    color: #bbe1fa;
+}
