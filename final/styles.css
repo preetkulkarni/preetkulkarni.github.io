@@ -281,18 +281,30 @@ html {
 .carousel-inner {
     max-height: 700px;
 }
+
 .carousel-img {
-    object-fit: cover;
-    height: 100%;
+    height: 65vh; /* Adjust this value to control the height of the carousel */
+    object-fit: cover; /* Ensures the image covers the available space without distortion */
+    object-position: center; /* Centers the image */
 }
+
 @media (max-width: 768px) {
     .carousel-inner {
         max-height: 400px;
     }
+
+    .carousel-img {
+        height: 50vh; /* Reduce height for smaller screens */
+    }
+
 }
 @media (max-width: 576px) {
     .carousel-inner {
         max-height: 300px;
+    }
+
+    .carousel-img {
+        height: 40vh; /* Further reduce height for very small screens */
     }
 }
 .modal-content {
