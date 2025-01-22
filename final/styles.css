@@ -256,9 +256,40 @@ body {
     transform: translateY(-5px);
 }
 
-/* Link Transitions */
+/* General Link Styles */
 a {
-    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Unvisited Links */
+a:link {
+    color: #ffffff; 
+    background: transparent;
+    
+}
+
+/* Visited Links */
+a:visited {
+    color: #ffffff; 
+    background: transparent; 
+}
+
+/* Hover Effects */
+a:hover {
+    color: #ffc107;
+    background: transparent; 
+    box-shadow: 0 0 10px rgba(51, 91, 244, 0.5), 0 0 15px rgba(42, 233, 201, 0.5); 
+}
+
+/* Active Link */
+a:active {
+    color: #2ae9c9; 
+    background: transparent; 
+    transform: scale(0.98); 
 }
 
 /* Ensure Smooth Scrolling */
@@ -268,14 +299,14 @@ html {
 
 /* Navbar Link */
 .nav-link {
-    color: #bbe1fa; /* Default color */
-    text-decoration: none; /* Remove underline */
-    font-weight: normal; /* Default weight */
+    color: #bbe1fa;
+    text-decoration: none; 
+    font-weight: normal; 
 }
 
 .nav-link.active-link {
-    font-weight: bold; /* Bold text for active link */
-    text-decoration: underline; /* Underline for active link */
+    font-weight: bold; 
+    text-decoration: underline; 
 }
 
 #mediaCarousel {
@@ -322,9 +353,9 @@ html {
 }
 
 .carousel-img {
-    height: 65vh; /* Adjust this value to control the height of the carousel */
-    object-fit: cover; /* Ensures the image covers the available space without distortion */
-    object-position: center; /* Centers the image */
+    height: 65vh; 
+    object-fit: cover; 
+    object-position: center;
 }
 
 @media (max-width: 768px) {
@@ -333,7 +364,7 @@ html {
     }
 
     .carousel-img {
-        height: 50vh; /* Reduce height for smaller screens */
+        height: 50vh; 
     }
 
 }
@@ -343,7 +374,7 @@ html {
     }
 
     .carousel-img {
-        height: 40vh; /* Further reduce height for very small screens */
+        height: 40vh;
     }
 }
 .modal-content {
