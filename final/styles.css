@@ -434,7 +434,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    background: url('../assets/background-grid.svg'); 
+    background: url('../assets/other/background-grid.svg'); 
     width: 100%;
     height: 100%;
     z-index: 1; 
