@@ -44,19 +44,27 @@ Welcome to my personal portfolio website! This platform showcases my skills, pro
 
 
 ```bash
-portfolio-website/
+portfolio-ver1/
 │
 ├── assets/
 │   ├── images/
-│   │   ├── pfp.png
-│   │   ├── (logos for programming languages)
-├── other/
-├── Resume_PreetKulkarni.pdf
+│   │   └──(logos for programming languages)
+│   ├── media/ 
+│   │   └──(photos for carousel)
+│   ├── other/
+│   │   └──(placeholder files, etc)
+│   │ 
+│   ├──Resume_PreetKulkarni.pdf
+│   └──pkzpfp.pdf
 │
-├── index.html
-├── style.css
-└── script.js
-
+├── final/
+│   ├── placeholder/ 
+│   │    └──p-index.html
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+└── README.md
 ```
     
 ## 🔗 Links
