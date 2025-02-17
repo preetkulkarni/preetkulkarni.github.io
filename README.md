@@ -60,10 +60,10 @@ portfolio-ver1/
 ├── final/
 │   ├── placeholder/ 
 │   │    └──p-index.html
-│   ├── index.html
 │   ├── style.css
 │   └── script.js
 │
+├── index.html
 └── README.md
 ```
     
